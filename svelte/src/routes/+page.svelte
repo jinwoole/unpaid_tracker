@@ -38,47 +38,49 @@
   <title>{title}</title>
 </svelte:head>
 
-<div class="mt-16 text-center text-4xl font-pretendard py-4">
-    임금체불 공지일로부터
-</div>
-<div class="text-center text-8xl py-2">
-    {date}일 
-</div>
+<div class="flex justify-center items-center min-h-screen">
+    <div class="bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg border border-gray-200 rounded-lg shadow-lg w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12 p-6">
+        <div class="mt-8 text-center text-4xl font-pretendard py-4">
+            임금체불 공지일로부터
+        </div>
+        <div class="text-center text-8xl py-2">
+            {date}일 
+        </div>
 
-<div>
-    <div class="text-center text-xl font-pretendard mt-4">
-        지난 월급날로부터 {daysSinceLastPayday}일 지났습니다
-    </div>
-    <div class="text-center text-xl font-pretendard mt-1">
-        다음 월급날까지 {daysUntilNextPayday}일 남았습니다
-    </div>
-</div>
+        <div>
+            <div class="text-center text-xl font-pretendard mt-4">
+                지난 월급날로부터 {daysSinceLastPayday}일 지났습니다
+            </div>
+            <div class="text-center text-xl font-pretendard mt-1">
+                다음 월급날까지 {daysUntilNextPayday}일 남았습니다
+            </div>
+        </div>
 
-<div class="text-center font-pretendard mt-4">
-    급여 로딩 중... (0/100 %)
-</div>
-<div class="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto py-2">
-    <ProgressBar value={undefined} />
-</div>
+        <div class="text-center font-pretendard mt-4">
+            급여 로딩 중... (0/100 %)
+        </div>
+        <div class="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto py-2">
+            <ProgressBar value={undefined} />
+        </div>
 
-<div class="flex justify-center w-full mt-8">
-    <div class="mx-auto px-4 w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12">
-        <Accordion>
-            <AccordionItem open>
-                <svelte:fragment slot="lead"><i class="fa-solid fa-question"></i></svelte:fragment>
-                <svelte:fragment slot="summary">{summary1}</svelte:fragment>
-                <svelte:fragment slot="content">{answer1}</svelte:fragment>
-            </AccordionItem>
-            <AccordionItem>
-                <svelte:fragment slot="lead"><i class="fa-regular fa-clock"></i></svelte:fragment>
-                <svelte:fragment slot="summary">{summary2}</svelte:fragment>
-                <svelte:fragment slot="content">{answer2}</svelte:fragment>
-            </AccordionItem>
-            <AccordionItem>
-                <svelte:fragment slot="lead"><i class="fa-regular fa-comment"></i></svelte:fragment>
-                <svelte:fragment slot="summary">{summary3}</svelte:fragment>
-                <svelte:fragment slot="content">{answer3}</svelte:fragment>
-            </AccordionItem>
-        </Accordion>
+        <div class="mt-8">
+            <Accordion>
+                <AccordionItem open>
+                    <svelte:fragment slot="lead"><i class="fa-solid fa-question"></i></svelte:fragment>
+                    <svelte:fragment slot="summary">{summary1}</svelte:fragment>
+                    <svelte:fragment slot="content">{answer1}</svelte:fragment>
+                </AccordionItem>
+                <AccordionItem>
+                    <svelte:fragment slot="lead"><i class="fa-regular fa-clock"></i></svelte:fragment>
+                    <svelte:fragment slot="summary">{summary2}</svelte:fragment>
+                    <svelte:fragment slot="content">{answer2}</svelte:fragment>
+                </AccordionItem>
+                <AccordionItem>
+                    <svelte:fragment slot="lead"><i class="fa-regular fa-comment"></i></svelte:fragment>
+                    <svelte:fragment slot="summary">{summary3}</svelte:fragment>
+                    <svelte:fragment slot="content">{answer3}</svelte:fragment>
+                </AccordionItem>
+            </Accordion>
+        </div>
     </div>
 </div>
