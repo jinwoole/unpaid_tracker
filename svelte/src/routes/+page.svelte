@@ -51,9 +51,15 @@
             <div class="text-center text-xl font-pretendard mt-4">
                 지난 월급날로부터 {daysSinceLastPayday}일 지났습니다
             </div>
-            <div class="text-center text-xl font-pretendard mt-1">
-                다음 월급날까지 {daysUntilNextPayday}일 남았습니다
-            </div>
+            {#if daysUntilNextPayday === 0}
+                <div class="text-center text-xl font-pretendard mt-1">
+                    축하합니다! 마치 슈퍼앱같이 즐거운 월급날입니다!
+                </div>
+            {:else}
+                <div class="text-center text-xl font-pretendard mt-1">
+                    다음 월급날까지 {daysUntilNextPayday}일 남았습니다
+                </div>
+            {/if}
         </div>
 
         <div class="text-center font-pretendard mt-4">
