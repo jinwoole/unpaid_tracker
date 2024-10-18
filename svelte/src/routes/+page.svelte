@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="flex justify-center items-center min-h-screen">
-    <div class="bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg border border-gray-200 rounded-lg shadow-lg w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12 p-6">
+    <div class="card p-8 w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-2xl">
         <div class="mt-8 text-center text-4xl font-pretendard py-4">
             임금체불 공지일로부터
         </div>
@@ -63,7 +63,7 @@
             <ProgressBar value={undefined} />
         </div>
 
-        <div class="mt-8">
+        <div class="py-8">
             <Accordion>
                 <AccordionItem open>
                     <svelte:fragment slot="lead"><i class="fa-solid fa-question"></i></svelte:fragment>
