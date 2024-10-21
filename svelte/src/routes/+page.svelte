@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="flex justify-center items-center min-h-screen">
-    <div class="card p-8 w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-2xl">
+    <div class="p-8 w-full sm:w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-2xl">
         <div class="mt-8 text-center text-4xl font-pretendard py-4">
             임금체불 공지일로부터
         </div>
@@ -53,7 +53,7 @@
             </div>
             {#if daysUntilNextPayday === 0}
                 <div class="text-center text-xl font-pretendard mt-1">
-                    축하합니다! 슈퍼앱같은 월급!
+                    오늘 슈퍼앱같은 월급을 받을 수 있겠군요!
                 </div>
             {:else}
                 <div class="text-center text-xl font-pretendard mt-1">
