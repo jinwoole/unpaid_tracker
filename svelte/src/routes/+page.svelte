@@ -53,7 +53,7 @@
             </div>
             {#if daysUntilNextPayday === 0}
                 <div class="text-center text-xl font-pretendard mt-1">
-                    축하합니다! 마치 슈퍼앱같이 즐거운 월급날입니다!
+                    축하합니다! 슈퍼앱같은 월급!
                 </div>
             {:else}
                 <div class="text-center text-xl font-pretendard mt-1">
