@@ -48,18 +48,18 @@
         </div>
 
         <div>
+            {#if daysSinceLastPayday === 0}
+            <div class="text-center text-xl font-pretendard mt-4">
+                오늘은 슈퍼앱같은 월급날! 🎉💰🎊🤮
+            </div>
+            {:else}
             <div class="text-center text-xl font-pretendard mt-4">
                 지난 월급날로부터 {daysSinceLastPayday}일 지났습니다
             </div>
-            {#if daysUntilNextPayday === 0}
-                <div class="text-center text-xl font-pretendard mt-1">
-                    오늘 슈퍼앱같은 월급을 받을 수 있겠군요!
-                </div>
-            {:else}
-                <div class="text-center text-xl font-pretendard mt-1">
-                    다음 월급날까지 {daysUntilNextPayday}일 남았습니다
-                </div>
             {/if}
+            <div class="text-center text-xl font-pretendard mt-2">
+            다음 월급날까지 {daysUntilNextPayday}일 남았습니다
+            </div>
         </div>
 
         <div class="text-center font-pretendard mt-4">
