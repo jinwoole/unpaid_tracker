@@ -63,7 +63,7 @@
         </div>
 
         <div class="text-center font-pretendard mt-4">
-            급여 로딩 중... (0/100 %)
+            급여 로딩 중... (20/100 %)
         </div>
         <div class="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto py-2">
             <ProgressBar value={undefined} />
